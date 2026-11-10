@@ -15,10 +15,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="description" content="For virksomheder, der selv holder GDPR-dokumentationen: fortegnelsen efter artikel 30 trin for trin og de årlige kontroller i et årshjul.">
 <link rel="icon" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="variant.css">
 <script src="smoke.js" defer></script>
 <!-- faq-jsonld:start -->
 <script type="application/ld+json">
@@ -77,120 +73,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<header><div class="shell">
-  <a class="brand" href="index.html" data-ev="click_logo_home"><span class="icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>GDPR i orden</a>
-  <nav aria-label="Hovedmenu"><a href="#hvad" data-ev="click_nav_hvad">Det får du</a><a href="price.html" data-ev="click_nav_pris">Pris</a><a href="#eksempel" data-ev="click_nav_eksempel">Eksempel</a><a href="#start" data-ev="click_nav_start">Kom i gang</a></nav>
+<header><div class="wrap">
+  <div class="logo"><a href="index.html" data-ev="click_logo_home">GDPR i orden</a></div>
+  <nav class="top"><a href="#hvad" data-ev="click_nav_hvad">Det får du</a><a href="price.html" data-ev="click_nav_pris">Pris</a><a href="#eksempel" data-ev="click_nav_eksempel">Eksempel</a><a href="#start" data-ev="click_nav_start">Kom i gang</a></nav>
 </div></header>
 
-<main class="shell">
-  <section class="hero split">
-    <div class="flow">
-      <span class="kicker in" style="--i:0"><span class="dot" aria-hidden="true"></span>Til mindre virksomheder uden egen jurist</span>
-      <h1 class="in" style="--i:1">Jeres fortegnelse over behandlinger. <em>Udfyldt trin for trin, holdt ajour med et årshjul.</em></h1>
-      <p class="lede in" style="--i:2">Hver behandling af personoplysninger beskrives med formål, kategorier, modtagere, slettefrister og sikkerhed. Databehandlere og aftaler samles ét sted, og årshjulet minder jer om de kontroller, der skal gøres.</p>
-      <div class="actions in" style="--i:3">
-        <a class="pill magnetic" href="price.html" data-ev="cta_click">Det har jeg brug for <span class="arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <p class="note"><svg class="warn" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Tjenesten er under forberedelse · Der modtages ingen betaling på denne side</p>
-      </div>
-    </div>
-
-    <div class="stack in" style="--i:2" aria-hidden="true">
-      <div class="panel float" style="--i:0">
-        <div class="row"><b>Fortegnelse over behandlinger</b><span class="tag end">Artikel 30</span></div>
-        <p class="mono">Behandling: løn og personale</p>
-        <div class="rows">
-          <div class="row"><span class="key">Formål</span>Lønudbetaling og personaleadministration</div>
-          <div class="row"><span class="key">Kategorier</span>Medarbejdere, kontaktoplysninger</div>
-          <div class="row"><span class="key">Modtagere</span><span class="typing">Lønbureau, pensionsselskab</span></div>
-          <div class="row"><span class="key">Slettefrist</span><span class="skeleton"></span></div>
-          <div class="row"><span class="key">Sikkerhed</span><span class="skeleton"></span></div>
-        </div>
-        <div class="row"><span class="meter"><i></i></span><span class="mono">trin for trin</span></div>
-      </div>
-      <div class="panel glass float row" style="--i:2">
-        <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v3M21 12h-3M12 21v-3M3 12h3"/><path d="M12 12l3-2"/></svg></span>
-        <span><b>Årshjul: næste kontrol</b><br><span class="mono">Gennemgang af adgangsrettigheder</span></span>
-      </div>
-    </div>
-  </section>
+<div class="wrap">
+  <div class="hero">
+    <h1>Jeres fortegnelse over behandlinger — udfyldt trin for trin og holdt ajour med et årshjul</h1>
+    <p class="sub">For mindre virksomheder uden egen jurist: hver behandling af personoplysninger beskrives med formål, kategorier, modtagere, slettefrister og sikkerhed, databehandlere og aftaler samles ét sted, og årshjulet minder jer om de kontroller, der skal gøres.</p>
+    <a class="cta" href="price.html" data-ev="cta_click">Det har jeg brug for</a>
+    <p class="cta-note">Tjenesten er under forberedelse · Der modtages ingen betaling på denne side</p>
+  </div>
 
   <section id="hvad" data-view="features_view">
-    <div class="split head">
-      <div class="flow"><span class="kicker">Det får du</span><h2>Ét sted til hele GDPR-dokumentationen</h2></div>
-      <p class="lede">Fire dele, der hænger sammen: fortegnelsen, leverandørerne, de løbende kontroller og det, der skal logges, når noget sker.</p>
-    </div>
-    <div class="bento">
-      <article class="tile wide">
-        <div class="panel" aria-hidden="true">
-          <div class="row mono"><span>Behandlinger</span><span class="end">sorteret efter mangler</span></div>
-          <div class="rows">
-            <div class="row swap" style="--d:1"><span class="dot"></span>Kunder<span class="tag ok end">Udfyldt</span></div>
-            <div class="row swap" style="--d:-1"><span class="dot warn"></span>Rekruttering<span class="tag warn end">Slettefrist mangler</span></div>
-            <div class="row"><span class="dot"></span>Løn og personale<span class="tag ok end">Udfyldt</span></div>
-            <div class="row"><span class="dot"></span>Nyhedsbrev<span class="tag ok end">Udfyldt</span></div>
-          </div>
-        </div>
-        <div class="label"><b>Fortegnelse (artikel 30)</b><span>Hver behandling med formål, kategorier, modtagere og slettefrister.</span><a class="pill soft" href="price.html" data-ev="feature_fortegnelse">Det har jeg brug for</a></div>
-      </article>
-
-      <article class="tile">
-        <div class="panel" aria-hidden="true">
-          <div class="rows">
-            <div class="row"><span class="dot"></span>Lønsystem<span class="tag ok end">Aftale</span></div>
-            <div class="row"><span class="dot"></span>Mailudbyder<span class="tag ok end">Aftale</span></div>
-            <div class="row"><span class="dot warn"></span>Webhotel<span class="tag warn end">Mangler</span></div>
-          </div>
-          <div class="toast"><span class="dot warn"></span>Databehandleraftale mangler</div>
-        </div>
-        <div class="label"><b>Databehandlere</b><span>Leverandører og databehandleraftaler samlet ét sted.</span><a class="pill soft" href="price.html" data-ev="feature_databehandlere">Det har jeg brug for</a></div>
-      </article>
-
-      <article class="tile">
-        <div class="panel" aria-hidden="true">
-          <div class="ring"><div><span class="mono">næste kontrol</span><b>Adgangs&shy;rettigheder</b></div></div>
-        </div>
-        <div class="label"><b>Årshjul</b><span>Årlige kontroller med påmindelser og dokumentation.</span><a class="pill soft" href="price.html" data-ev="feature_aarshjul">Det har jeg brug for</a></div>
-      </article>
-
-      <article class="tile wide">
-        <div class="panel" aria-hidden="true">
-          <div class="row"><b>Sikkerhedsbrud registreret</b><span class="tag alert end">Frist for anmeldelse</span></div>
-          <span class="meter alert"><i></i></span>
-          <div class="row"><b>Anmodning om indsigt</b><span class="tag end">Frist</span></div>
-          <span class="meter"><i></i></span>
-          <div class="marquee"><div>
-            <span class="tag">indsigt</span><span class="tag">sletning</span><span class="tag">berørte oplysninger</span><span class="tag">hvad skete der</span><span class="tag">hvad gjorde I</span><span class="tag">ansvarlig</span>
-            <span class="tag">indsigt</span><span class="tag">sletning</span><span class="tag">berørte oplysninger</span><span class="tag">hvad skete der</span><span class="tag">hvad gjorde I</span><span class="tag">ansvarlig</span>
-          </div></div>
-        </div>
-        <div class="label"><b>Brud og anmodninger</b><span>Sikkerhedsbrud og anmodninger fra registrerede logget.</span><a class="pill soft" href="price.html" data-ev="feature_brud">Det har jeg brug for</a></div>
-      </article>
+    <h2>Det får du</h2>
+    <div class="grid">
+      <div class="card"><b>Fortegnelse (artikel 30)</b><span>Hver behandling med formål, kategorier, modtagere og slettefrister.</span><br><a class="btn" href="price.html" data-ev="feature_fortegnelse">Det har jeg brug for</a></div>
+      <div class="card"><b>Databehandlere</b><span>Leverandører og databehandleraftaler samlet ét sted.</span><br><a class="btn" href="price.html" data-ev="feature_databehandlere">Det har jeg brug for</a></div>
+      <div class="card"><b>Årshjul</b><span>Årlige kontroller med påmindelser og dokumentation.</span><br><a class="btn" href="price.html" data-ev="feature_aarshjul">Det har jeg brug for</a></div>
+      <div class="card"><b>Brud og anmodninger</b><span>Sikkerhedsbrud og anmodninger fra registrerede logget.</span><br><a class="btn" href="price.html" data-ev="feature_brud">Det har jeg brug for</a></div>
     </div>
   </section>
 
   <section id="eksempel" data-view="example_view">
-    <div class="split">
-      <div class="flow">
-        <span class="kicker">Eksempel</span>
-        <h2>Et revisionsfirma, sat op (opdigtede data)</h2>
-        <p class="lede">Revisionsfirma med 12 medarbejdere. Fortegnelsen får syv behandlinger: kunder, løn, rekruttering, nyhedsbrev, videoovervågning, leverandører og hjemmeside. Fem databehandlere er tilknyttet med aftaler. I marts minder årshjulet om gennemgang af adgangsrettigheder, og kontrollen gemmes med dato og ansvarlig.</p>
-        <div class="actions"><a class="pill magnetic" href="price.html" data-ev="click_cta_after_example">Vælg pakke <span class="arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
-      </div>
-      <div class="panel" aria-hidden="true">
-        <div class="row"><b>Revisionsfirma</b><span class="tag ok end">Fortegnelse ajour</span></div>
-        <p class="mono">Behandlinger</p>
-        <div class="chips"><span class="tag in" style="--i:0">Kunder</span><span class="tag in" style="--i:1">Løn</span><span class="tag in" style="--i:2">Rekruttering</span><span class="tag in" style="--i:3">Nyhedsbrev</span><span class="tag in" style="--i:4">Videoovervågning</span><span class="tag in" style="--i:5">Leverandører</span><span class="tag in" style="--i:6">Hjemmeside</span></div>
-        <p class="mono">Databehandlere</p>
-        <div class="chips"><span class="tag in" style="--i:7">Fem med aftale</span></div>
-        <div class="rows"><div class="row ok"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg><span>Marts: adgangsrettigheder gennemgået, gemt med dato og ansvarlig</span></div></div>
-      </div>
-    </div>
+    <h2>Eksempel (opdigtede data)</h2>
+    <p class="fine">Revisionsfirma med 12 medarbejdere. Fortegnelsen får syv behandlinger: kunder, løn, rekruttering, nyhedsbrev, videoovervågning, leverandører og hjemmeside. Fem databehandlere er tilknyttet med aftaler. I marts minder årshjulet om gennemgang af adgangsrettigheder, og kontrollen gemmes med dato og ansvarlig.</p>
+    <a class="cta" href="price.html" data-ev="click_cta_after_example">Vælg pakke</a>
   </section>
 <!-- seo-tekst:start -->
   <section id="opis">
-    <div class="split">
-      <div class="flow sticky"><span class="kicker">Baggrund</span><h2>Sådan virker det</h2><p class="lede">Fra regneark til levende dokument: hvad programmet gør, og hvad ansvaret stadig er jeres.</p></div>
-      <div class="prose">
+    <h2>Sådan virker det</h2>
     <p>Virksomheder, der behandler personoplysninger, skal efter databeskyttelsesforordningen kunne dokumentere, hvordan de gør det. En central del er fortegnelsen over behandlingsaktiviteter efter artikel 30: hvilke oplysninger der behandles, til hvilket formål, hvem der modtager dem, og hvor længe de opbevares.</p>
     <p>Datatilsynet stiller en skabelon til rådighed, og mange mindre virksomheder udfylder den i et regneark. Det fungerer første gang, men regnearket bliver hurtigt forældet: nye systemer, nye leverandører og nye medarbejdere kommer til, og ingen husker at opdatere det.</p>
     <p>Programmet gør fortegnelsen til et levende dokument. I beskriver hver behandling trin for trin: formål, kategorier af registrerede og oplysninger, modtagere, overførsler til lande uden for EU, slettefrister og de sikkerhedsforanstaltninger, I har.</p>
@@ -203,60 +116,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Flere personer i virksomheden kan arbejde i programmet, hver med de opgaver, de er ansvarlige for, og alle ændringer gemmes med dato og navn. Tidligere versioner af fortegnelsen bevares, så det altid kan ses, hvordan den så ud på en bestemt dato.</p>
     <p>Det tager en eftermiddag at komme i gang: virksomhedens oplysninger, de vigtigste behandlinger og jeres leverandører. Programmet kører i browseren uden installation.</p>
     <p>Programmet er lavet til danske virksomheder, der selv vil holde GDPR-dokumentationen ved lige. Det er under forberedelse: først undersøger vi, om virksomheder har brug for det. Det er ikke juridisk rådgivning; ansvaret for overholdelse af reglerne ligger hos virksomheden.</p>
-      </div>
-    </div>
   </section>
   <section id="faq">
-    <div class="split head"><div class="flow"><span class="kicker">FAQ</span><h2>Spørgsmål og svar</h2></div></div>
-    <div class="rows">
-    <div class="split"><h3>Hvad er en fortegnelse efter artikel 30?</h3>
-    <p class="lede">En oversigt over virksomhedens behandlinger af personoplysninger: formål, kategorier, modtagere, slettefrister og sikkerhed.</p></div>
-    <div class="split"><h3>Skal fortegnelsen sendes til Datatilsynet?</h3>
-    <p class="lede">Nej, den føres internt og fremvises, hvis Datatilsynet beder om den.</p></div>
-    <div class="split"><h3>Hvad er årshjulet?</h3>
-    <p class="lede">De løbende kontroller med påmindelser, så I kan dokumentere, at de er gjort.</p></div>
-    <div class="split"><h3>Er det juridisk rådgivning?</h3>
-    <p class="lede">Nej. Programmet hjælper med dokumentationen; ansvaret ligger hos virksomheden.</p></div>
-    <div class="split"><h3>Kan jeg allerede bruge det?</h3>
-    <p class="lede">Ikke endnu. Programmet er under forberedelse, og vi undersøger, om virksomheder har brug for det.</p></div>
-    </div>
+    <h2>Spørgsmål og svar</h2>
+    <h3>Hvad er en fortegnelse efter artikel 30?</h3>
+    <p>En oversigt over virksomhedens behandlinger af personoplysninger: formål, kategorier, modtagere, slettefrister og sikkerhed.</p>
+    <h3>Skal fortegnelsen sendes til Datatilsynet?</h3>
+    <p>Nej, den føres internt og fremvises, hvis Datatilsynet beder om den.</p>
+    <h3>Hvad er årshjulet?</h3>
+    <p>De løbende kontroller med påmindelser, så I kan dokumentere, at de er gjort.</p>
+    <h3>Er det juridisk rådgivning?</h3>
+    <p>Nej. Programmet hjælper med dokumentationen; ansvaret ligger hos virksomheden.</p>
+    <h3>Kan jeg allerede bruge det?</h3>
+    <p>Ikke endnu. Programmet er under forberedelse, og vi undersøger, om virksomheder har brug for det.</p>
   </section>
 <!-- seo-tekst:end -->
   <section id="start" data-view="start_view">
-    <div class="split">
-      <div class="flow">
-        <span class="kicker">Kom i gang</span>
-        <h2>Opret jeres virksomhed</h2>
-        <p class="lede">Det tager en eftermiddag: virksomhedens oplysninger, de vigtigste behandlinger og jeres leverandører.</p>
-      </div>
-      <div class="panel">
-        <div class="field">
-          <label for="ansatte">Antal medarbejdere</label>
-          <select id="ansatte" data-ev-focus="form_start" aria-describedby="ansatte-hjaelp"><option value="">— vælg —</option><option>1–10</option><option>11–50</option><option>51–250</option><option>Over 250</option></select>
-          <p class="note" id="ansatte-hjaelp">Bruges til at foreslå de behandlinger, der passer til jer.</p>
-        </div>
-        <a class="pill magnetic" href="price.html" data-ev="form_submit_click">Start <span class="arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      </div>
-    </div>
+    <h2>Opret jeres virksomhed</h2>
+    <p><label>Antal medarbejdere<br><select data-ev-focus="form_start" style="margin-top:6px;padding:8px;font-size:16px"><option value="">— vælg —</option><option>1–10</option><option>11–50</option><option>51–250</option><option>Over 250</option></select></label></p>
+    <a class="cta" href="price.html" data-ev="form_submit_click">Start</a>
   </section>
-</main>
+</div>
 
-<footer><div class="shell">
+<footer><div class="wrap">
   <p><a href="privacy.html" data-ev="click_legal_privacy">Privatlivspolitik</a></p>
   <p class="muted">Program til jeres GDPR-dokumentation. Ikke juridisk rådgivning; ansvaret for overholdelse ligger hos virksomheden.</p>
 </div></footer>
-<script>
-(function () {
-  if (!window.matchMedia || !matchMedia("(pointer: fine)").matches || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  document.querySelectorAll(".magnetic").forEach(function (el) {
-    el.addEventListener("pointermove", function (e) {
-      var r = el.getBoundingClientRect();
-      el.style.transform = "translate(" + ((e.clientX - r.left - r.width / 2) * 0.18) + "px," + ((e.clientY - r.top - r.height / 2) * 0.28) + "px)";
-    });
-    el.addEventListener("pointerleave", function () { el.style.transform = ""; });
-  });
-})();
-</script>
 
 </body>
 </html>
