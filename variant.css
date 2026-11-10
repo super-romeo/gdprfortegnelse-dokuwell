@@ -2,25 +2,27 @@
    surfaces, spring easing), then general components only. Token names shared with the base stylesheet
    (--bg, --ink, --muted, --line, --accent, --accent-soft) re-theme its rules too. */
 :root {
-  --bg: #f9fafb;
+  /* smokes' house palette (СМ-04), light everywhere; status tones only inside drawn UI */
+  --bg: #fcfcfc;
   --surface: #ffffff;
-  --chip: #f4f4f5;
-  --line: #e4e4e7;
-  --ink: #18181b;
-  --ink-2: #3f3f46;
-  --muted: #52525b;
-  --faint: #63636b;
-  --foot: #a1a1aa;
-  --accent: #1f7a5c;
-  --accent-ink: #14513d;
-  --accent-soft: #e7f3ee;
-  --amber: #8a5306;
-  --amber-soft: #fbf3e2;
-  --rose: #9f2d4a;
-  --rose-soft: #f9e9ee;
+  --chip: #f7f8f9;
+  --line: #dfe1e5;
+  --ink: #05080b;
+  --ink-2: #05080b;
+  --muted: #5c646f;
+  --faint: #5c646f;
+  --foot: #5c646f;
+  --accent: #006acf;
+  --accent-ink: #05080b;
+  --accent-soft: #d6efff;
+  --focus: #0086dd;
+  --amber: #9a6700;
+  --amber-soft: color-mix(in srgb, #9a6700 5%, #ffffff);
+  --rose: #cf222e;
+  --rose-soft: color-mix(in srgb, #cf222e 8%, #ffffff);
 
-  --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono: "Geist Mono", ui-monospace, Menlo, Consolas, monospace;
+  --sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --t-xs: 0.75rem;
   --t-s: 0.875rem;
   --t-m: 1rem;
@@ -40,8 +42,8 @@
   --r-xl: 2.5rem;
   --r-pill: 999px;
 
-  --shadow: 0 20px 40px -15px rgba(24, 24, 27, 0.07);
-  --shadow-lift: 0 30px 60px -25px rgba(20, 81, 61, 0.22);
+  --shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.07);
+  --shadow-lift: 0 30px 60px -25px rgba(0, 0, 0, 0.16);
   --edge: inset 0 1px 0 rgba(255, 255, 255, 0.9);
 
   --spring: cubic-bezier(0.16, 1, 0.3, 1);
@@ -62,7 +64,7 @@ h3 { font-size: var(--t-l); font-weight: 600; letter-spacing: -0.02em; line-heig
 b { font-weight: 600; }
 a { color: inherit; }
 label { font-size: var(--t-s); font-weight: 500; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
 
 /* layout */
 .shell { max-width: 1240px; margin: 0 auto; padding: 0 var(--s4); }
@@ -78,23 +80,23 @@ section + section { border-top: 1px solid var(--line); }
 .prose p:first-child { color: var(--ink); font-size: var(--t-l); }
 
 /* header and footer (own, so the base white bar / dark footer never clash) */
-header { position: sticky; top: 0; z-index: 20; background: rgba(249, 250, 251, 0.72); backdrop-filter: blur(14px) saturate(140%); border-bottom: 1px solid var(--line); box-shadow: var(--edge); }
+header { position: sticky; top: 0; z-index: 20; background: rgba(252, 252, 252, 0.72); backdrop-filter: blur(14px) saturate(140%); border-bottom: 1px solid var(--line); box-shadow: var(--edge); }
 header .shell { display: flex; align-items: center; justify-content: space-between; gap: var(--s2); min-height: 4.25rem; }
 .brand { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--ink); font-weight: 600; letter-spacing: -0.02em; text-decoration: none; }
 nav { display: flex; flex-wrap: wrap; gap: 0.25rem; }
 nav a { padding: 0.5rem 0.9rem; border-radius: var(--r-pill); color: var(--ink-2); font-size: var(--t-s); text-decoration: none; transition: background-color var(--fast) var(--spring); }
 nav a:hover { background: var(--chip); color: var(--ink); }
-footer { background: var(--ink); color: var(--foot); padding: 2.75rem 0 3.5rem; font-size: var(--t-s); }
+footer { background: var(--chip); color: var(--foot); border-top: 1px solid var(--line); padding: 2.75rem 0 3.5rem; font-size: var(--t-s); }
 footer .shell { display: grid; grid-template-columns: auto 1fr; gap: 0.75rem var(--s5); }
-footer a { color: var(--bg); text-underline-offset: 3px; }
+footer a { color: var(--ink); text-underline-offset: 3px; }
 footer .muted { margin: 0; color: var(--foot); max-width: 60ch; justify-self: end; text-align: right; }
 
 /* buttons */
-.pill { display: inline-flex; align-items: center; gap: 0.6rem; justify-self: start; padding: 0.95rem 1.1rem 0.95rem 1.5rem; border-radius: var(--r-pill); background: var(--ink); color: var(--bg); font-weight: 500; text-decoration: none; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 14px 30px -14px rgba(24, 24, 27, 0.45); transition: transform 0.45s var(--spring), background-color var(--fast) var(--spring); }
-.pill:hover { background: var(--ink-2); }
+.pill { display: inline-flex; align-items: center; gap: 0.6rem; justify-self: start; padding: 0.95rem 1.1rem 0.95rem 1.5rem; border-radius: var(--r-pill); background: var(--accent); color: var(--surface); font-weight: 500; text-decoration: none; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 14px 30px -14px rgba(0, 0, 0, 0.3); transition: transform 0.45s var(--spring), background-color var(--fast) var(--spring); }
+.pill:hover { background: var(--accent); }
 .pill:active { transform: translateY(1px) scale(0.98); }
-.pill.soft { padding: 0.55rem 1rem; font-size: var(--t-s); background: var(--accent-soft); color: var(--accent-ink); box-shadow: inset 0 0 0 1px rgba(31, 122, 92, 0.18); }
-.arrow { display: grid; place-items: center; width: 1.75rem; height: 1.75rem; border-radius: 50%; background: var(--accent); color: var(--surface); transition: transform 0.45s var(--spring); }
+.pill.soft { padding: 0.55rem 1rem; font-size: var(--t-s); background: var(--accent-soft); color: var(--accent-ink); box-shadow: inset 0 0 0 1px rgba(0, 106, 207, 0.18); }
+.arrow { display: grid; place-items: center; width: 1.75rem; height: 1.75rem; border-radius: 50%; background: var(--surface); color: var(--accent); transition: transform 0.45s var(--spring); }
 .pill:hover .arrow { transform: translateX(3px); }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s3); }
 .note { display: flex; align-items: center; gap: var(--s1); margin: 0; max-width: 36ch; color: var(--muted); font-size: var(--t-s); line-height: 1.45; }
@@ -122,7 +124,7 @@ footer .muted { margin: 0; color: var(--foot); max-width: 60ch; justify-self: en
 .meter i { display: block; height: 100%; width: 80%; border-radius: inherit; background: var(--tone, var(--accent)); transform-origin: left; animation: grow 6s var(--spring) infinite; }
 .skeleton { display: block; width: 60%; height: 0.6rem; border-radius: var(--r-pill); background: linear-gradient(90deg, var(--chip), var(--line) 40%, var(--chip) 80%) 0 0 / 220% 100%; animation: shimmer 2.2s linear infinite; }
 .typing { display: inline-block; max-width: 100%; overflow: hidden; white-space: nowrap; padding-right: 2px; border-right: 1.5px solid var(--accent); animation: type 6s steps(26, end) infinite, blink 1s steps(1) infinite; }
-.toast { position: absolute; inset: auto 1.4rem 1.4rem; display: flex; align-items: center; gap: 0.6rem; padding: 0.75rem 0.9rem; border-radius: 1rem; background: var(--ink); color: var(--bg); font-size: var(--t-s); animation: toast 7s var(--spring) infinite; }
+.toast { position: absolute; inset: auto 1.4rem 1.4rem; display: flex; align-items: center; gap: 0.6rem; padding: 0.75rem 0.9rem; border-radius: 1rem; border: 1px solid var(--line); background: var(--surface); color: var(--ink); box-shadow: var(--shadow-lift); font-size: var(--t-s); animation: toast 7s var(--spring) infinite; }
 .ring { position: relative; justify-self: center; display: grid; place-items: center; width: 13rem; aspect-ratio: 1; border-radius: 50%; background: conic-gradient(var(--accent) 3% 10%, var(--line) 0 42%, var(--amber) 0 46%, var(--line) 0); }
 .ring::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(circle at 50% 0.45rem, var(--accent) 0.45rem, transparent 0.5rem); animation: spin 18s linear infinite; }
 .ring > div { display: grid; place-content: center; width: calc(100% - 1.75rem); aspect-ratio: 1; border-radius: 50%; background: var(--surface); text-align: center; }
@@ -147,9 +149,9 @@ footer .muted { margin: 0; color: var(--foot); max-width: 60ch; justify-self: en
 
 /* form */
 .field { display: grid; gap: var(--s1); }
-select { width: 100%; min-width: 0; appearance: none; font: inherit; color: var(--ink); padding: 0.875rem 2.75rem 0.875rem 1rem; border: 1px solid var(--line); border-radius: var(--r-m); background: var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2363636b' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 1rem center / 1rem; transition: border-color var(--fast) var(--spring), box-shadow var(--fast) var(--spring); }
+select { width: 100%; min-width: 0; appearance: none; font: inherit; color: var(--ink); padding: 0.875rem 2.75rem 0.875rem 1rem; border: 1px solid var(--line); border-radius: var(--r-m); background: var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235c646f' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 1rem center / 1rem; transition: border-color var(--fast) var(--spring), box-shadow var(--fast) var(--spring); }
 select:hover { border-color: var(--faint); }
-select:focus { outline: none; border-color: var(--accent); background-color: var(--surface); box-shadow: 0 0 0 4px rgba(31, 122, 92, 0.14); }
+select:focus { outline: none; border-color: var(--accent); background-color: var(--surface); box-shadow: 0 0 0 4px rgba(0, 134, 221, 0.18); }
 
 /* motion: load cascade + perpetual micro-interactions (transform/opacity only) */
 .in { animation: rise 0.9s var(--spring) both; animation-delay: calc(var(--i, 0) * 100ms); }
